@@ -1,8 +1,8 @@
 'use client';
 
 import { useActionState } from 'react';
-import { CustomerField } from '@/app/dashboard/overview/lib/definitions';
-import { State } from '@/app/dashboard/overview/lib/actions';
+import { CustomerField } from '@/app/dashboard/(overview)/lib/definitions';
+import { State } from '@/app/dashboard/(overview)/lib/actions';
 
 import Link from 'next/link';
 import {
@@ -12,7 +12,7 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
-import { createInvoice } from '@/app/dashboard/overview/lib/actions';
+import { createInvoice } from '@/app/dashboard/(overview)/lib/actions';
 
 const initialState: State = { message: null, errors: {} };
 
