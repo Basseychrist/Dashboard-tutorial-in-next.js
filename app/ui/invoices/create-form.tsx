@@ -2,6 +2,7 @@
 
 import { useActionState } from 'react';
 import { CustomerField } from '@/app/dashboard/(overview)/lib/definitions';
+import { State } from '@/app/dashboard/(overview)/lib//actions';
 import Link from 'next/link';
 import {
   CheckIcon,
@@ -11,12 +12,10 @@ import {
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/ui/button';
 import { createInvoice } from '@/app/dashboard/(overview)/lib/actions';
-import { State } from 'postgres';
 
-
+const initialState: State = { message: null, errors: {} };
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
-  const initialState: State = { message: null, errors: {} };
   const [state, formAction] = useActionState(createInvoice, initialState);
 
   return (
